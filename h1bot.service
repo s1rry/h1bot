@@ -1,0 +1,12 @@
+[Unit]
+Description=H1Cloud support Telegram bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/h1bot
+ExecStart=/opt/h1bot/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
